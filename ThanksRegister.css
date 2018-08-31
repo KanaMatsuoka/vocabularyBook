@@ -1,0 +1,21 @@
+.container{
+	width: 800px;
+	height: 500px;
+    background-color: #ea0bab;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+h2{
+  text-align: center;
+  font-size: 30px;
+  font-family: serif;
+  color: #ffffff;
+}
+
+p{
+  text-align: center;
+  font-size: 25px;
+  font-family: serif;
+}

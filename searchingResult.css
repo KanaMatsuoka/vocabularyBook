@@ -1,0 +1,56 @@
+.container{
+  width: 800px;
+  height: 900px;
+  background-color: #ea0bab;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.logo{
+  float: right;
+  margin-right: 40px;
+}
+.head{
+  text-align: center;
+}
+
+h1{
+  font-size: 47px;
+  font-family: serif;
+  color: #ffffff;
+}
+
+
+
+.list{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+table th, table td {
+  border: solid 2px #a5a57c;
+
+}
+
+table td{
+  padding: 3px 10px;
+  background: #fdfe8d
+}
+
+
+.close{
+  margin-left: 360px;
+  font-size: 30px;
+  border: solid 1px #ffffff;
+  background: #ffffff;
+  padding: 7px 10px;
+  margin-top: 60px;
+  color: #ea0bab;
+  font-family: serif;
+  border-radius: 15px;
+  text-decoration: none;
+}
