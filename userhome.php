@@ -9,23 +9,18 @@ if ($_GET){
   $page = 1;
 }
 
- // $page = $_REQUEST['page'];
-
- // if($page == ''){
- //  $page = 1;
- // }
 
  $page = max($page, 1);
  $sql = 'SELECT COUNT(*) AS cnt FROM word';
  $recordSet = mysqli_query($conn, $sql);
  $table = mysqli_fetch_assoc($recordSet);
- $maxPage = ceil($table['cnt'] / 5);
+ $maxPage = ceil($table['cnt'] / 7);
  $page = min($page, $maxPage);
- $start = ($page - 1) * 5;
+ $start = ($page - 1) * 7;
 
 
  $recordSet = mysqli_query($conn,'SELECT * FROM word LIMIT '.$start
-.',5');
+.',7');
  
 
 ?>
@@ -47,7 +42,7 @@ if ($_GET){
        </div>
 
        <div class="logo">
-          <a href="AddVocabulary.php"><img src="Project.css/writing.jpg" width="40" height="40"></a>
+          <a href="add2.php"><img src="Project.css/writing.jpg" width="40" height="40"></a>
           <a href="https://translate.google.com/?hl=ja"><img src="Project.css/google.jpg" width="40" height="40"></a>
           <a href="logout.php"><img src="Project.css/logout.jpg" width="40" height="40"></a>
         </div>
@@ -95,7 +90,7 @@ if ($_GET){
          echo "<td><a href='detail.php?id=$id'><span style='color: pink;'>$english</span></a></td>";
   }elseif($category == $kind['kind5']) {
 
-         echo "<td><a href='detail.php?id=$id'><span style='color: orange;'>$english</span></a></td>";
+         echo "<td><a href='detail.php?id=$id'><span style='color: #ff9900;'>$english</span></a></td>";
   }elseif($category == $kind['kind6']) {
 
          echo "<td><a href='detail.php?id=$id'><span style='color: black;'>$english</span></a></td>";
@@ -145,7 +140,6 @@ if ($_GET){
  }
  ?>
  
-
 
 </div>
 </body>

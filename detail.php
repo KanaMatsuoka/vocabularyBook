@@ -62,12 +62,14 @@
 ?>
        </table>
       </div>
-       <br>
+<br>
        <img src="Project.css/lace.jpg">
-       <br>
-       <br>
-       <br>
+<br>
+<br>
+<br>
        <a href="userhome.php" onclick="window.close()">Close</a>
+<br>
+<br>
   </div>
 
 </body>

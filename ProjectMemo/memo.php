@@ -1,3 +1,196 @@
+<!-- edit2.php -->
+
+<?php
+session_start();
+
+include 'dbconnect.php';
+
+$errorcode = 0;
+
+  $english = '';
+  $japanese = '';
+  $memo = '';
+  $check = '';
+  $category = '';
+  
+if(!empty($_GET['submit'])){
+  if(strlen($_GET['english']) > 16){
+     $error['english'] = 'lenght';
+     $errorcode = 1;
+    } else {
+      $error['english'] = '';
+      $english = $_GET['english'];
+
+    }
+    
+    if (strlen($_GET['japanese']) > 81) {
+     $error['japanese'] = 'lenght';
+     $errorcode = 1;
+     
+    }else {
+     $error['japanese']='';
+     $japanese = $_GET['japanese'];
+
+    }
+    
+    
+
+    if(strlen($_GET['memo']) > 401){
+    $error['memo'] = 'lenght';
+    $errorcode = 1;
+    } else {
+      $error['memo'] = '';
+      $memo = $_GET['memo'];
+
+    }
+}
+
+    if ($errorcode == 0){
+
+  $english = $_GET['english'];
+  $japanese = $_GET['japanese'];
+  $category = $_GET['category'];
+  $check = $_GET['check'];
+  $memo = $_GET['memo'];
+  $id = $_GET['id'];
+
+    var_dump($id);
+
+
+$sql = "UPDATE word SET english='$english',japanese='$japanese',category='$category',memo='$memo',remember='$check' WHERE id='$id'";
+
+// mysqli_query($conn, $sql) or die(mysqli_error($conn));
+    // header('Location:userhome.php');
+  if ($conn->query($sql) === TRUE) {
+  echo "Record is updated successfully <br>";
+} else {
+  echo "Error during updating record: " . $conn->error;
+
+
+
+}
+} else {
+  $error['english'] = '';
+  $error['japanese'] = '';
+  $error['memo'] = '';
+
+}
+
+
+
+
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Page</title>
+  <link rel="stylesheet" href="edit.css">
+</head>
+<body>
+  <div class="container">
+    <div class="head">
+      <br>
+      <br>
+      <img src="Project.css/star.jpg" width="90px;" height="90px;">
+      <h1>Edit Page</h1>
+    </div>
+     <form action="" method="GET" >
+      <div class="list">
+
+       <table class='list'>
+        
+<?php
+       echo "<tr>";
+       echo "<td>English</td>";
+       echo "<td><input type='text' pattern='^[0-9A-Za-z]+$'  name='english' value='$english' style='width:200px;' required></td>";
+       echo "</tr>";
+
+        echo "<tr>";
+        echo "<td>Japanese</td>";
+        echo "<td><input type='text' name='japanese' value='$japanese' style='width:200px;' required></td>";
+        echo "</tr>";
+
+        echo "<tr>";
+        echo "<td>Category</td>";
+        echo "<td>";
+        echo "<select name='category' style='width:200px; font-size:20px;' required>";
+        echo "<option value='noun'";if($category=="noun"){echo "selected";}
+          echo ">Noun</option>";
+        echo "<option value='verb'";if($category=="verb"){echo "selected";}
+          echo ">Verb</option>";
+        echo "<option value='adjective'";if($category=="adjective"){
+          echo "selected";}
+          echo ">Adjective</option>";
+        echo "<option value='adverb'";if($category=="adverb"){
+          echo "selected";}
+          echo ">Adverb</option>";
+        echo "<option value='phrase'";if($category=="phrase"){
+          echo "selected";}
+          echo ">Phrase</option>";
+        echo "<option value='other'";if($category=="other"){echo "selected";}
+          echo ">Other</option>";
+        echo "</select>";
+        echo "</td>";
+        echo "</tr>";
+
+
+        
+        echo "<tr>";
+        echo "<td>Check</td>";
+        echo "<td>";
+
+        if($check == 'remember'){
+        echo "<input type='checkbox' name='check'
+               value='remember' checked>remember";
+        
+        echo "</td>";
+      }else{
+        echo "<input type='checkbox' name='check'
+               value='remember'>remember";
+        
+        echo "</td>";
+        
+
+      }
+        echo "</tr>";
+
+        echo "<tr>";
+        echo "<td>Memo</td>";
+        echo "<td><textarea rows='10' cols='50' name='memo' value='$memo'>$memo</textarea></td>";
+        echo "</tr>";?>
+    </table>
+
+       <?php if ($error['english'] == 'lenght'): ?> 
+       <p class="error">Please input within 15 half-pitch alphanumeric characters</p>
+       <?php endif; ?>
+
+       <?php if ($error['memo'] == 'lenght'): ?> 
+       <p class="error">Please input within 100 characters</p>
+       <?php endif; ?>
+
+        <?php if ($error['japanese'] == 'lenght'): ?> 
+        <p class="error">Please input within 40 characters</p>
+        <?php endif; ?>
+
+
+      </div>
+       <br>
+       <img src="Project.css/lace.jpg">
+       <br>
+       <input class="close" type="submit" name="submit" value="Edit">
+       <input type='hidden' name='id' value='<?php echo $id ;?>'>
+
+     </form>
+  </div>
+
+</body>
+</html>
+
+
+
+
 <!-- Forgot.php -->
 <?php
 

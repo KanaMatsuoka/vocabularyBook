@@ -34,10 +34,9 @@ if ($result->num_rows > 0){
 <body>
   <div class="container">
     <div class="head">
-      <br>
-      <br>
-      <br>
-      <br>
+<br>
+<br>
+<br>
       <img src="Project.css/star.jpg" width="90px;" height="90px;">
       <h1>Login Form</h1>
     </div>
@@ -63,15 +62,16 @@ if ($result->num_rows > 0){
       
        
       <input class="submit" type="submit" name="submit" value="Login">
-      <br>
-       <br>
+<br>
+<br>
        <img src="Project.css/lace.jpg">
-       <br>
-       
+<br>
+<br>
        <p>If you forgot password Click <a href="Forgot.php">here!</a></p>
-       
-       
+
      </form>
+<br>
+<br>
   </div>
 
 </body>

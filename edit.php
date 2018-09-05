@@ -21,20 +21,18 @@ $result_word=$conn->query($sql_word);
 	<div class="container">
 <br>
       <div class="logo">
-          <a href="AddVocabulary.php"><img src="Project.css/writing.jpg" width="40" height="40"></a>
+          <a href="add2.php"><img src="Project.css/writing.jpg" width="40" height="40"></a>
           <a href="https://translate.google.com/?hl=ja"><img src="Project.css/google.jpg" width="40" height="40"></a>
           <a href="logout.php"><img src="Project.css/logout.jpg" width="40" height="40"></a>
       </div>
-      <br>
-      <br>
-      <br>
+<br>
+<br>
+<br>
       <div class="head">
         <img src="Project.css/star.jpg" width="90px;" height="90px;">
         <h1>Edit Page</h1>
      </div>
-    
-    
-<br>
+
 <form action="edit2.php" method="get">
 
 <table class='list' >
@@ -49,7 +47,7 @@ $result_word=$conn->query($sql_word);
 
        echo "<tr>";
        echo "<td>English</td>";
-       echo "<td><input type='text' pattern='^[0-9A-Za-z]+$'  name='english' value='$english' style='width:200px;' required></td>";
+       echo "<td><input type='text' pattern='^[A-Za-z\s]+$'  name='english' value='$english' style='width:200px;' required></td>";
        echo "</tr>";
 
         echo "<tr>";
@@ -107,14 +105,14 @@ $result_word=$conn->query($sql_word);
  <br>
 </table>
 <br>
+       <img src="Project.css/lace.jpg">
 <br>
-<input class="close" type="submit" value="Submit">
+<input class="close" type="submit" value="Check">
 <input type='hidden' name='id' value='<?php echo $id ;?>'>
 
 </form>
 
 
-<br>
 <br>
 <br>
     

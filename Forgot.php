@@ -28,22 +28,23 @@
  }
 }
 
-var_dump($error['error']);
 
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Forgot Form</title>
-  <link rel="stylesheet" href="register.css">
+  <title>Forgot Password Form</title>
+  <link rel="stylesheet" href="Register2.css">
 </head>
 <body>
   <div class="container">
     <div class="head">
-      <br>
+<br>
+<br>
+<br>
       <img src="Project.css/star.jpg" width="90px;" height="90px;">
-      <h1>Forgot Form</h1>
+      <h1>Forgot Password Form</h1>
     </div>
      <form action="" method="POST" >
       <div class="list">
@@ -62,7 +63,9 @@ var_dump($error['error']);
             <?php endif; ?>
        </table>
       </div>
-       <br>
+<br>
+<br>
+<br>
        <img src="Project.css/lace.jpg">
 
        <br>

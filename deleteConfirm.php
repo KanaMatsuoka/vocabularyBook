@@ -63,15 +63,17 @@
 ?>
        </table>
       </div>
-       <br>
+<br>
        <img src="Project.css/lace.jpg">
-       <br>
-       <br>
-       <br>
+<br>
+<br>
+<br>
        <a href="userhome.php" onclick="window.close()">Back</a>
-       <br>
-       <br>
+<br>
+<br>
        <a href='delete.php?id=<?php echo $id ?>'>Delete</a>
+<br>
+<br>
   </div>
 
 </body>

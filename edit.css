@@ -1,11 +1,18 @@
 .container{
   width: 800px;
-  height: 900px;
+  background-size: 100% auto;
   background-color: #ea0bab;
   margin-right: auto;
   margin-left: auto;
 }
 
+.error{
+  font-size: 14px;
+  color:#ffd700;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
 
 .logo{
   float: right;

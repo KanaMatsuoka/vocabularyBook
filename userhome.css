@@ -1,7 +1,7 @@
 .container{
   width: 800px;
-  height: 900px;
   background-color: #ea0bab;
+  background-size: 100% auto;
   margin-right: auto;
   margin-left: auto;
 }
@@ -51,8 +51,12 @@ h3{
 table {
   border-collapse: collapse;
   width: 600px;
+
+
+  
 }
 table th, table td {
+  height: 5px;
   border: solid 2px #a5a57c;
 
 }

@@ -1,6 +1,7 @@
 .container{
   width: 800px;
-  height: 1100px;
+  /*height: 1100px;*/
+  background-size: 100% auto;
   background-color: #ea0bab;
   margin-right: auto;
   margin-left: auto;
@@ -22,7 +23,7 @@ h2{
 
 .error{
   font-size: 14px;
-  color: yellow;
+  color: #ffd700;
   margin-top: 0;
   margin-bottom: 0;
 }

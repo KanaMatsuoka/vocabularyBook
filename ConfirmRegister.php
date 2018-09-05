@@ -4,7 +4,7 @@ include 'dbconnect.php';
 
 
 if (!isset($_SESSION['join'])){
-	header('Location:temporaryRegister.php');
+	header('Location:Register2.php');
 	exit();
 }
 
@@ -69,11 +69,12 @@ exit();
  	 	
  	 	  <input class="submit" type="submit" name="register" value="Register">
 
-		  <button class="submit2"><a href="temporaryRegister.php?action=rewrite">Rewrite</a></button>
+		  <button class="submit2"><a href="Register2.php?action=rewrite">Rewrite</a></button>
 		  </div>
 
 
    </form>
+<br>
   </div>
 </body>
 </html>
