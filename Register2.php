@@ -116,7 +116,7 @@ $_POST = $_SESSION['join'];
        <table>
         <tr>
            <td>User Name</td>
-           <td><input type="text" name="username" pattern="^[0-9A-Za-z]+$" value="<?php echo htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8'); ?>" required>
+           <td><input type="text" name="username" pattern="^[A-Za-z\s]+$" value="<?php echo htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8'); ?>" required>
 
             <?php if ($error['username2'] == 'lenght'): ?> 
             <p class="error">Please input with 2 to 15 half-pitch alphanumeric characters</p>
