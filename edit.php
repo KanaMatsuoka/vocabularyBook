@@ -15,7 +15,13 @@ $result_word=$conn->query($sql_word);
 
 <!DOCTYPE html>
 <html>
+<head>
+  
+  <title>edit page</title>
 <link rel="stylesheet" href="edit.css">
+<link rel="shortcut icon" href="Project.css/list .png" >
+
+</head>
 
 <body>
 	<div class="container">

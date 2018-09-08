@@ -77,6 +77,8 @@ if(!empty($_GET)){
 <head>
   <title>Add New Vocabulary</title>
   <link rel="stylesheet" href="AddVocabulary.css">
+  <link rel="shortcut icon" href="Project.css/list .png" >
+
 </head>
 <body>
   <div class="container">

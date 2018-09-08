@@ -98,6 +98,8 @@ if(isset($_GET["submit"])){
 <head>
   <title>Is this OK?</title>
   <link rel="stylesheet" href="edit.css">
+  <link rel="shortcut icon" href="Project.css/list .png" >
+
 </head>
 <body>
   <div class="container">

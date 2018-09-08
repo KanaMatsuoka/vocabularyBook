@@ -36,6 +36,8 @@
 <head>
   <title>Forgot Password Form</title>
   <link rel="stylesheet" href="Register2.css">
+  <link rel="shortcut icon" href="Project.css/list .png" >
+
 </head>
 <body>
   <div class="container">
@@ -68,10 +70,12 @@
 <br>
        <img src="Project.css/lace.jpg">
 
-       <br>
+<br>
        <input class="submit" type="submit" name="submit" value="Submit">
-       
+
      </form>
+<br>
+<br>
   </div>
 
 </body>

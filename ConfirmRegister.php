@@ -28,6 +28,8 @@ exit();
 <head>
 	<title>Confirm Registration Contents</title>
 	<link rel="stylesheet" href="ConfirmRegister.css">
+    <link rel="shortcut icon" href="Project.css/list .png" >
+
 </head>
 <body>
   <div class="container">

@@ -14,6 +14,8 @@
 <head>
   <title>Detail Information</title>
   <link rel="stylesheet" href="Detail.css">
+  <link rel="shortcut icon" href="Project.css/list .png" >
+
 </head>
 <body>
   <div class="container">

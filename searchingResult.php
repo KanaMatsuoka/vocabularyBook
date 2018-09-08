@@ -16,7 +16,12 @@
 
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="searchingResult.css">
+<head>
+  <title>searching result page</title>
+  <link rel="stylesheet" href="searchingResult.css">
+  <link rel="shortcut icon" href="Project.css/list .png" >
+</head>
+
 
 <body>
 

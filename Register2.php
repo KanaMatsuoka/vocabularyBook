@@ -102,6 +102,8 @@ $_POST = $_SESSION['join'];
 <head>
   <title>Registration Form</title>
   <link rel="stylesheet" href="Register2.css">
+  <link rel="shortcut icon" href="Project.css/list .png" >
+
 </head>
 <body>
   <div class="container">

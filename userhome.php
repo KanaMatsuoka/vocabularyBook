@@ -27,7 +27,11 @@ if ($_GET){
 
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="userhome.css">
+<head>
+  <title>Main page</title>
+  <link rel="stylesheet" href="userhome.css">
+  <link rel="shortcut icon" href="Project.css/list .png" >
+</head>
 
 <body>
 

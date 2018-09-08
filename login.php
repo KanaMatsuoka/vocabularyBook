@@ -30,6 +30,8 @@ if ($result->num_rows > 0){
 <head>
   <title>Login Form</title>
   <link rel="stylesheet" href="login.css">
+  <link rel="shortcut icon" href="Project.css/list .png" >
+
 </head>
 <body>
   <div class="container">
