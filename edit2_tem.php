@@ -3,6 +3,8 @@ session_start();
 
 include 'dbconnect.php';
 
+$ID = $_SESSION["id"];
+
 $errorcode = 0;
 
   $english = '';
@@ -26,7 +28,7 @@ if(!empty($_GET['submit'])){
 
     }
     
-    if (strlen($_GET['japanese']) > 80) {
+    if (mb_strlen($_GET['japanese']) > 40) {
      $error['japanese'] = 'lenght';
      $errorcode = 1;
      
@@ -38,7 +40,7 @@ if(!empty($_GET['submit'])){
     
     
 
-    if(mb_strwidth($_GET['memo'],'UTF-8')/2 > 200){
+    if(mb_strlen($_GET['memo'],'UTF-8') > 100){
     $error['memo'] = 'lenght';
     $errorcode = 1;
     } else {
@@ -66,13 +68,13 @@ if(!empty($_GET['submit'])){
 
 if(isset($_GET["submit"])){
 
-  $sql = "UPDATE word SET english='$english',japanese='$japanese',category='$category',memo='$memo',remember='$check' WHERE id='$id'";
+  $sql = "UPDATE word SET infoID='$ID',english='$english',japanese='$japanese',category='$category',memo='$memo',remember='$check' WHERE id='$id'";
 
   // mysqli_query($conn, $sql) or die(mysqli_error($conn));
       // 
     if ($conn->query($sql) === TRUE) {
     echo "Record is updated successfully <br>";
-  header('Location:userhome.php');
+  header('Location:user_tem.php');
   } else {
     echo "Error during updating record: " . $conn->error;
 
@@ -80,14 +82,6 @@ if(isset($_GET["submit"])){
 }
 
 }
-// } else {
-//   $error['english'] = '';
-//   $error['japanese'] = '';
-//   $error['memo'] = '';
-
-// }
-
-
 
 
 
@@ -96,6 +90,7 @@ if(isset($_GET["submit"])){
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>Is this OK?</title>
   <link rel="stylesheet" href="edit.css">
   <link rel="shortcut icon" href="Project.css/list .png" >
@@ -105,10 +100,11 @@ if(isset($_GET["submit"])){
   <div class="container">
 <br>
     <div class="logo">
-      <a href="add2.php"><img src="Project.css/writing.jpg" width="40" height="40"></a>
-          <a href="https://translate.google.com/?hl=ja"><img src="Project.css/google.jpg" width="40" height="40"></a>
+          <a href="add2.php"><img src="Project.css/writing.jpg" width="40" height="40"></a>
+          <a href="user_tem.php"><img src="Project.css/home.jpg" width="40" height="40"></a>
+          <a href="https://translate.google.com/?hl=ja" target="_blank"><img src="Project.css/google.jpg" width="40" height="40"></a>
           <a href="logout.php"><img src="Project.css/logout.jpg" width="40" height="40"></a>
-      </div>
+    </div>
 <br>
 <br>
 <br>

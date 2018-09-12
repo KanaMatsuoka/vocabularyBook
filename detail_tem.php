@@ -12,6 +12,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>Detail Information</title>
   <link rel="stylesheet" href="Detail.css">
   <link rel="shortcut icon" href="Project.css/list .png" >
@@ -69,7 +70,7 @@
 <br>
 <br>
 <br>
-       <a href="userhome.php" onclick="window.close()">Close</a>
+       <a href="user_tem.php" onclick="window.close()">Close</a>
 <br>
 <br>
   </div>

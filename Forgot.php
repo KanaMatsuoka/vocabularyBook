@@ -34,6 +34,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>Forgot Password Form</title>
   <link rel="stylesheet" href="Register2.css">
   <link rel="shortcut icon" href="Project.css/list .png" >

@@ -10,7 +10,10 @@
   text-align: center;
 }
 
-
+.logo{
+  float:right;
+  margin-right: 40px;
+}
 
 h1{
   font-size: 47px;

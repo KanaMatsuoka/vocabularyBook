@@ -26,6 +26,7 @@ exit();
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Confirm Registration Contents</title>
 	<link rel="stylesheet" href="ConfirmRegister.css">
     <link rel="shortcut icon" href="Project.css/list .png" >

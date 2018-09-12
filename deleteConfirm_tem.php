@@ -12,6 +12,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>delete confirm page</title>
   <link rel="stylesheet" href="Detail.css">
   <link rel="shortcut icon" href="Project.css/list .png" >
@@ -25,7 +26,7 @@
       <img src="Project.css/star.jpg" width="90px;" height="90px;">
       <h1>Are you sure to delete this?</h1>
     </div>
-     <form action="login.php" method="POST" >
+     <form action="login_tem.php" method="POST" >
       <div class="list">
        <table>
 <?php
@@ -70,10 +71,10 @@
 <br>
 <br>
 <br>
-       <a href="userhome.php" onclick="window.close()">Back</a>
+       <a href="user_tem.php" onclick="window.close()">Back</a>
 <br>
 <br>
-       <a href='delete.php?id=<?php echo $id ?>'>Delete</a>
+       <a href='delete_tem.php?id=<?php echo $id ?>'>Delete</a>
 <br>
 <br>
   </div>

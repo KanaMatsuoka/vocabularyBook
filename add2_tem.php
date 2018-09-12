@@ -2,6 +2,9 @@
 
 session_start();
 
+$ID = $_SESSION["id"];
+
+
 include 'dbconnect.php';
 
 $errorcode = 0;
@@ -20,7 +23,7 @@ if(!empty($_GET)){
 
     }
     
-    if (strlen($_GET['japanese']) > 80) {
+    if (mb_strlen($_GET['japanese']) > 40) {
      $error['japanese'] = 'lenght';
      $errorcode = 1;
      
@@ -32,7 +35,7 @@ if(!empty($_GET)){
     
     
 
-    if(mb_strwidth($_GET['memo'],'UTF-8')/2 > 200){
+    if(mb_strlen($_GET['memo'],'UTF-8') > 100){
     $error['memo'] = 'lenght';
     $errorcode = 1;
     } else {
@@ -45,7 +48,7 @@ if(!empty($_GET)){
     $japanese = $_GET['japanese'];
     $category = $_GET['category'];
     $memo = $_GET['memo'];
-    $sql_check = "SELECT COUNT(*) AS cnt FROM word WHERE english='$english'";
+    $sql_check = "SELECT COUNT(*) AS cnt FROM word WHERE infoID='$ID' AND english='$english'";
     $record = mysqli_query($conn,$sql_check) or die(mysqli_error($conn));
     $table = mysqli_fetch_assoc($record);
 
@@ -58,10 +61,10 @@ if(!empty($_GET)){
 
     if ($errorcode == 0){
 
-    $sql = "INSERT INTO word (english,japanese,category,memo) VALUES ('$english','$japanese','$category','$memo')";
+    $sql = "INSERT INTO word (infoID,english,japanese,category,memo) VALUES ('$ID','$english','$japanese','$category','$memo')";
 
     mysqli_query($conn, $sql) or die(mysqli_error($conn));
-    header('Location:userhome.php');
+    header('Location:user_tem.php');
 
   }
 } else {
@@ -83,12 +86,17 @@ if(!empty($_GET)){
 <body>
   <div class="container">
     <div class="head">
-      <br>
-      <br>
+<br>
+      <div class="logo">
+          <a href="https://translate.google.com/?hl=ja" target="_blank"><img src="Project.css/google.jpg" width="40" height="40"></a>
+          <a href="user_tem.php"><img src="Project.css/home.jpg" width="40" height="40"></a>
+      </div>
+<br>
+<br>
       <img src="Project.css/star.jpg" width="90px;" height="90px;">
       <h1>Add New Vocabulary</h1>
     </div>
-     <form action="add2.php" method="GET" >
+     <form action="add2_tem.php" method="GET" >
       <div class="list">
        <table>
         <tr>

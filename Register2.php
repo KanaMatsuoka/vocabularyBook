@@ -100,6 +100,7 @@ $_POST = $_SESSION['join'];
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>Registration Form</title>
   <link rel="stylesheet" href="Register2.css">
   <link rel="shortcut icon" href="Project.css/list .png" >
@@ -158,7 +159,7 @@ $_POST = $_SESSION['join'];
            <td>Confirm Password</td>
            <td><input type="password" name="password2" value="<?php echo htmlspecialchars($_POST['password2'], ENT_QUOTES, 'UTF-8'); ?>"required>
 
-             <?php if ($error['password'] == 'same'): ?>
+             <?php if ($error['password2'] == 'same'): ?>
              <p class="error">Please input same password</p>
              <?php endif; ?>
 
