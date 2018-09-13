@@ -3,13 +3,16 @@
 
   include 'dbconnect.php';
 
+  $ID = $_SESSION["id"];
 
 
   if(isset($_GET['submit'])){
   $search=$_GET['search'];
-  $sql_search = "SELECT * FROM word WHERE english LIKE '%$search%'";
+  $sql_search = "SELECT * FROM word WHERE english LIKE '%$search%' AND infoID=$ID ";
 
-  $result_search=$conn->query($sql_search);
+  // $result_search=$conn->query($sql_search);
+  $result_search= mysqli_query($conn, $sql_search);
+
 }
 
 ?>
@@ -17,6 +20,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>searching result page</title>
   <link rel="stylesheet" href="searchingResult.css">
   <link rel="shortcut icon" href="Project.css/list .png" >
@@ -28,8 +32,8 @@
   <div class="container">
 <br>
      <div class="logo">
-        <a href="add1.php"><img src="Project.css/writing.jpg" width="40" height="40"></a>
-        <a href="https://translate.google.com/?hl=ja"><img src="Project.css/google.jpg" width="40" height="40"></a>
+        <a href="add2_tem.php"><img src="Project.css/writing.jpg" width="40" height="40"></a>
+        <a href="https://translate.google.com/?hl=ja" target="_blank"><img src="Project.css/google.jpg" width="40" height="40"></a>
         <a href=""><img src="Project.css/logout.jpg" width="40" height="40"></a>
      </div>
 <br>
@@ -74,7 +78,7 @@ if($result_search->num_rows > 0){
       <img src="Project.css/lace.jpg">
        <br>
        <br>
-       <a class=close href="userhome.php" onclick="window.close()">Close</a>
+       <a class=close href="user_tem.php" onclick="window.close()">Close</a>
 <br>
 <br>
 </div>

@@ -12,7 +12,7 @@
 
   if(strlen($password)==8 && $password === $password2){
     mysqli_query($conn, $sql_pass);
-    header('Location:login.php');
+    header('Location:login_tem.php');
   }else{
     $error['password'] = 'lenght';
   }
@@ -22,6 +22,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>Forgot Password Form</title>
   <link rel="stylesheet" href="Register2.css">
   <link rel="shortcut icon" href="Project.css/list .png" >
@@ -66,6 +67,8 @@
 <br>
        <input class="submit" type="submit" name="submit" value="Submit">
      </form>
+<br>
+<br>
   </div>
 
 </body>

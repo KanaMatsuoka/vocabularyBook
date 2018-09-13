@@ -7,7 +7,7 @@ session_start();
   echo "ログアウトしました。";
 
 
-  header('Location:login.php');
+  header('Location:login_tem.php');
 
 
   ?>

@@ -15,9 +15,13 @@ $sql = "SELECT * FROM userlist WHERE username='$username' AND PASSWORD='$passwor
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0){
-  
+  while ($rows=$result->fetch_assoc()) {
+  $ID = $rows['infoID'];
+  $_SESSION["id"]=$ID;
   $_SESSION['username']=$username;
-  header('Location:userhome.php');
+  header('Location:user_tem.php');
+
+ }
 }else{
   $error['login'] = 'failed';
 }
@@ -42,7 +46,7 @@ if ($result->num_rows > 0){
       <img src="Project.css/star.jpg" width="90px;" height="90px;">
       <h1>Login Form</h1>
     </div>
-     <form action="login.php" method="POST" >
+     <form action="login_tem.php" method="POST" >
       <div class="list">
        <table>
         <tr>
@@ -69,7 +73,7 @@ if ($result->num_rows > 0){
        <img src="Project.css/lace.jpg">
 <br>
 <br>
-       <p>If you forgot password Click <a href="Forgot.php">here!</a></p>
+       <p>If you forgot password, Click <a href="Forgot.php">here!</a></p>
 
      </form>
 <br>

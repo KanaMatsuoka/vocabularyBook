@@ -3,6 +3,8 @@ session_start();
 
 include 'dbconnect.php';
 
+$ID = $_SESSION["id"];
+
 $id = $_GET['id'];
 
 $sql_word = "SELECT * FROM word WHERE id=$id";
@@ -16,7 +18,7 @@ $result_word=$conn->query($sql_word);
 <!DOCTYPE html>
 <html>
 <head>
-  
+  <meta charset="utf-8">
   <title>edit page</title>
 <link rel="stylesheet" href="edit.css">
 <link rel="shortcut icon" href="Project.css/list .png" >
@@ -28,8 +30,9 @@ $result_word=$conn->query($sql_word);
 <br>
       <div class="logo">
           <a href="add2.php"><img src="Project.css/writing.jpg" width="40" height="40"></a>
-          <a href="https://translate.google.com/?hl=ja"><img src="Project.css/google.jpg" width="40" height="40"></a>
-          <a href="logout.php"><img src="Project.css/logout.jpg" width="40" height="40"></a>
+          <a href="user_tem.php"><img src="Project.css/home.jpg" width="40" height="40"></a>
+          <a href="https://translate.google.com/?hl=ja" target="_blank"><img src="Project.css/google.jpg" width="40" height="40"></a>
+          <a href="logout_tem.php"><img src="Project.css/logout.jpg" width="40" height="40"></a>
       </div>
 <br>
 <br>
@@ -39,7 +42,7 @@ $result_word=$conn->query($sql_word);
         <h1>Edit Page</h1>
      </div>
 
-<form action="edit2.php" method="get">
+<form action="edit2_tem.php" method="get">
 
 <table class='list' >
 <?php
