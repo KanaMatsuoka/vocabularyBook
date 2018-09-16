@@ -11,7 +11,7 @@ $errorcode = 0;
 
   $english = '';
   $japanese = '';
-  $memo = ''; 
+  $memo = '';
 
 if(!empty($_GET)){
   if(strlen($_GET['english']) > 15){
@@ -22,18 +22,16 @@ if(!empty($_GET)){
       $english = $_GET['english'];
 
     }
-    
+
     if (mb_strlen($_GET['japanese']) > 40) {
      $error['japanese'] = 'lenght';
      $errorcode = 1;
-     
+
     }else {
      $error['japanese']='';
      $japanese = $_GET['japanese'];
 
     }
-    
-    
 
     if(mb_strlen($_GET['memo'],'UTF-8') > 100){
     $error['memo'] = 'lenght';
@@ -103,10 +101,10 @@ if(!empty($_GET)){
            <td>English</td>
            <td><input type="text" pattern="^[A-Za-z\s]+$" name="english" value="<?php echo $english;?>" style="width:200px;" required>
 
-            <?php if ($error['english'] == 'lenght'): ?> 
+            <?php if ($error['english'] == 'lenght'): ?>
             <p class="error">Please input within 15 half-pitch alphanumeric characters</p>
             <?php endif; ?>
-            <?php if ($error['english'] == 'duplicate'): ?> 
+            <?php if ($error['english'] == 'duplicate'): ?>
             <p class="error">Please input another name</p>
             <?php endif; ?>
 
@@ -117,7 +115,7 @@ if(!empty($_GET)){
            <td>Japanese</td>
            <td><input type="text"  name="japanese" value="<?php echo $japanese;?>"style="width:200px;" required>
 
-            <?php if ($error['japanese'] == 'lenght'): ?> 
+            <?php if ($error['japanese'] == 'lenght'): ?>
             <p class="error">Please input within 40 characters</p>
             <?php endif; ?>
 
@@ -143,7 +141,7 @@ if(!empty($_GET)){
           <td>Memo</td>
           <td><textarea rows="10" cols="50" name="memo"><?php echo $memo;?></textarea>
 
-            <?php if ($error['memo'] == 'lenght'): ?> 
+            <?php if ($error['memo'] == 'lenght'): ?>
             <p class="error">Please input within 100 characters</p>
             <?php endif; ?>
 
@@ -154,7 +152,7 @@ if(!empty($_GET)){
       </div>
        <br>
        <img src="Project.css/lace.jpg">
-       
+
        <input class="submit" type="submit" name="submit" value="Submit">
      </form>
 <br>

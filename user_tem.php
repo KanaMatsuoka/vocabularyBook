@@ -5,16 +5,16 @@
 
  $ID = $_SESSION["id"];
 
-if ($_GET){ 
+if ($_GET){
   $page = $_REQUEST['page'];
-} else { 
+} else {
   $page = 1;
 }
 
 
  $page = max($page, 1);
  $sql = "SELECT COUNT(*) AS cnt FROM word WHERE infoID=$ID";
- 
+
 
  $recordSet = mysqli_query($conn, $sql);
  $table = mysqli_fetch_assoc($recordSet);

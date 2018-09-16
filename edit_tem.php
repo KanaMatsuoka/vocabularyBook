@@ -29,10 +29,10 @@ $result_word=$conn->query($sql_word);
 	<div class="container">
 <br>
       <div class="logo">
-          <a href="add2.php"><img src="Project.css/writing.jpg" width="40" height="40"></a>
-          <a href="user_tem.php"><img src="Project.css/home.jpg" width="40" height="40"></a>
+          <a href="add2_tem.php"><img src="Project.css/writing.jpg" width="40" height="40"></a>
           <a href="https://translate.google.com/?hl=ja" target="_blank"><img src="Project.css/google.jpg" width="40" height="40"></a>
-          <a href="logout_tem.php"><img src="Project.css/logout.jpg" width="40" height="40"></a>
+          <a href="user_tem.php"><img src="Project.css/home.jpg" width="40" height="40"></a>
+
       </div>
 <br>
 <br>
@@ -98,7 +98,7 @@ $result_word=$conn->query($sql_word);
         echo "<td>";
         echo "<input type='checkbox' name='check'
                value='remember' $checked>remember";
-        
+
         echo "</td>";
         echo "</tr>";
 
@@ -110,8 +110,8 @@ $result_word=$conn->query($sql_word);
  }
 
  ?>
- <br>
- <br>
+<br>
+<br>
 </table>
 <br>
        <img src="Project.css/lace.jpg">
@@ -120,11 +120,8 @@ $result_word=$conn->query($sql_word);
 <input type='hidden' name='id' value='<?php echo $id ;?>'>
 
 </form>
-
-
 <br>
 <br>
-    
 </div>
 </body>
 </html>

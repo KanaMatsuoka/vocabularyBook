@@ -108,7 +108,13 @@ $_POST = $_SESSION['join'];
 </head>
 <body>
   <div class="container">
+<br>
+    <div class="logo">
+       <a href="login_tem.php"><img src="Project.css/login.jpg" width="50" height="50"></a>
+    </div>
+
     <div class="head">
+<br>
 <br>
 <br>
       <img src="Project.css/star.jpg" width="90px;" height="90px;">
@@ -121,13 +127,13 @@ $_POST = $_SESSION['join'];
            <td>User Name</td>
            <td><input type="text" name="username" pattern="^[A-Za-z\s]+$" value="<?php echo htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8'); ?>" required>
 
-            <?php if ($error['username2'] == 'lenght'): ?> 
+            <?php if ($error['username2'] == 'lenght'): ?>
             <p class="error">Please input with 2 to 15 half-pitch alphanumeric characters</p>
             <?php endif; ?>
-            <?php if ($error['username'] == 'duplicate'): ?> 
+            <?php if ($error['username'] == 'duplicate'): ?>
             <p class="error">Please input another name</p>
             <?php endif; ?>
-            <?php if ($error['username1'] == 'character'): ?> 
+            <?php if ($error['username1'] == 'character'): ?>
             <p class="error">Please input half-pitch alphanumeric characters</p>
             <?php endif; ?>
            </td>
@@ -137,7 +143,7 @@ $_POST = $_SESSION['join'];
         <tr>
            <td>Email</td>
            <td><input type="email" name="email" value="<?php echo htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8'); ?>"required>
-            <?php if ($error['email'] == 'duplicate'): ?> 
+            <?php if ($error['email'] == 'duplicate'): ?>
             <p class="error">Please input another email</p>
             <?php endif; ?>
            </td>
@@ -166,9 +172,8 @@ $_POST = $_SESSION['join'];
            </td>
         </tr>
 
-        
        </table>
-    
+
   </div>
 <br>
 <br>

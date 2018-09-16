@@ -100,10 +100,9 @@ if(isset($_GET["submit"])){
   <div class="container">
 <br>
     <div class="logo">
-          <a href="add2.php"><img src="Project.css/writing.jpg" width="40" height="40"></a>
-          <a href="user_tem.php"><img src="Project.css/home.jpg" width="40" height="40"></a>
+          <a href="add2_tem.php"><img src="Project.css/writing.jpg" width="40" height="40"></a>
           <a href="https://translate.google.com/?hl=ja" target="_blank"><img src="Project.css/google.jpg" width="40" height="40"></a>
-          <a href="logout.php"><img src="Project.css/logout.jpg" width="40" height="40"></a>
+          <a href="user_tem.php"><img src="Project.css/home.jpg" width="40" height="40"></a>
     </div>
 <br>
 <br>
@@ -137,14 +136,11 @@ if(isset($_GET["submit"])){
           echo ">Noun</option>";
         echo "<option value='verb'";if($category=="verb"){echo "selected";}
           echo ">Verb</option>";
-        echo "<option value='adjective'";if($category=="adjective"){
-          echo "selected";}
+        echo "<option value='adjective'";if($category=="adjective"){echo "selected";}
           echo ">Adjective</option>";
-        echo "<option value='adverb'";if($category=="adverb"){
-          echo "selected";}
+        echo "<option value='adverb'";if($category=="adverb"){echo "selected";}
           echo ">Adverb</option>";
-        echo "<option value='phrase'";if($category=="phrase"){
-          echo "selected";}
+        echo "<option value='phrase'";if($category=="phrase"){echo "selected";}
           echo ">Phrase</option>";
         echo "<option value='other'";if($category=="other"){echo "selected";}
           echo ">Other</option>";
@@ -163,29 +159,8 @@ if(isset($_GET["submit"])){
         echo "<td>";
         echo "<input type='checkbox' name='check'
                value='remember' $checked>remember";
-        
         echo "</td>";
         echo "</tr>";
-      //   echo "<tr>";
-      //   echo "<td>Check</td>";
-      //   echo "<td>";
-
-      //   if($check == 'remember'){
-      //   echo "<input type='checkbox' name='check'
-      //          value='on' checked>remember";
-        
-      //   echo "</td>";
-      // }else{
-      //   echo "<input type='hidden' name='check'
-      //          value='off'>remember";
-        
-      //   echo "</td>";
-        
-      // }
-        
-
-      
-        // echo "</tr>";
 
         echo "<tr>";
         echo "<td>Memo</td>";
@@ -193,11 +168,12 @@ if(isset($_GET["submit"])){
         echo "</tr>";?>
     </table>
 
-       <?php if ($error['english'] == 'lenght'): ?> 
+       <?php if ($error['english'] == 'lenght'): ?>
+
        <p class="error">Please input within 15 half-pitch alphanumeric characters</p>
        <?php endif; ?>
 
-       <?php if ($error['memo'] == 'lenght'): ?> 
+       <?php if ($error['memo'] == 'lenght'): ?>
        <p class="error">Please input within 100 characters</p>
        <?php endif; ?>
 

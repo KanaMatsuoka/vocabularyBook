@@ -72,7 +72,7 @@
        <img src="Project.css/lace.jpg">
 
 <br>
-       <input class="submit" type="submit" name="submit" value="Submit">
+       <input class="submit" type="submit" name="submit" value="Check">
 
      </form>
 <br>

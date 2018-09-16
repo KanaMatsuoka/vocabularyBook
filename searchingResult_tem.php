@@ -34,7 +34,6 @@
      <div class="logo">
         <a href="add2_tem.php"><img src="Project.css/writing.jpg" width="40" height="40"></a>
         <a href="https://translate.google.com/?hl=ja" target="_blank"><img src="Project.css/google.jpg" width="40" height="40"></a>
-        <a href=""><img src="Project.css/logout.jpg" width="40" height="40"></a>
      </div>
 <br>
 <br>
@@ -64,10 +63,10 @@ if($result_search->num_rows > 0){
         echo "<td>$english</td>";
         echo "<td>$japanese</td>";
         echo "<td>$category</td>";
-        echo "<td>
-                <a href='edit.php?id=$id'><img src='Project.css/edit.jpg' width='25' height='25'></a>
-                <a href='deleteConfirm.php?id=$id'><img src='Project.css/delete.jpg' width='25' height='25'></a>";
         echo "<td>$memo</td>";
+        echo "<td>
+                <a href='edit_tem.php?id=$id'><img src='Project.css/edit.jpg' width='25' height='25'></a>
+                <a href='deleteConfirm_tem.php?id=$id'><img src='Project.css/delete.jpg' width='25' height='25'></a>";
 
         echo "</tr>";
    }

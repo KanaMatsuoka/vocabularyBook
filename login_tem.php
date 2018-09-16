@@ -61,19 +61,18 @@ if ($result->num_rows > 0){
 
        </table>
       </div>
-      
-       <?php if ($error['login'] == 'failed'):?> 
+
+       <?php if ($error['login'] == 'failed'):?>
        <p class="error">Please check User Name or Password</p>
        <?php endif; ?>
-      
-       
+
       <input class="submit" type="submit" name="submit" value="Login">
 <br>
 <br>
        <img src="Project.css/lace.jpg">
 <br>
 <br>
-       <p>If you forgot password, Click <a href="Forgot.php">here!</a></p>
+       <p>If you forgot password, <a href="Forgot.php">click</a> here!</p>
 
      </form>
 <br>

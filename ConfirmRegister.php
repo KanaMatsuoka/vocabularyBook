@@ -40,12 +40,11 @@ exit();
        <img src="Project.css/star.jpg" width="90px;" height="90px;">
 <br>
 <br>
-      <h2>Please check the contents of regstration</h2>
+      <h2>Please check the contents of registration</h2>
 <br>
-     
     </div>
 	   <form action="" method="POST">
-		<input type="hidden" name="action" value="submit" > 
+		<input type="hidden" name="action" value="submit" >
 
 	   <div class="list">
 	  	  <table>
@@ -68,8 +67,8 @@ exit();
 		      	<td>Can not be displayed</td>
 		      </tr>
 
-		  	</table>
- 	 	
+		  </table>
+
  	 	  <input class="submit" type="submit" name="register" value="Register">
 
 		  <button class="submit2"><a href="Register2.php?action=rewrite">Rewrite</a></button>
